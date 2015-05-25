@@ -1,6 +1,7 @@
-package specific;
+package generic;
 
-import generic.Repository;
+import specific.Person;
+import specific.PersonInMemoryRepository;
 
 public class InMemoryRepositoryTest extends AbstractRepositoryTestBase {
 

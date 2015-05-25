@@ -1,10 +1,10 @@
-package specific;
+package generic;
 
-import generic.Repository;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+import specific.Person;
 
 import java.util.ArrayList;
 import java.util.List;
