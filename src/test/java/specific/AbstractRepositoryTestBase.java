@@ -11,7 +11,7 @@ import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class PersonRepositoryTestBase {
+public abstract class AbstractRepositoryTestBase {
 
     Repository<Person> repository;
 
@@ -19,9 +19,11 @@ public class PersonRepositoryTestBase {
     Person person2;
     Person person3;
 
+    public abstract Repository<Person> getRepository();
+
     @Before
     public void setup() {
-        repository = new PersonInMemoryRepository();
+        repository = getRepository();
         person1 = new Person("test 1");
         person2 = new Person("test 2");
         person3 = new Person("test 3");
