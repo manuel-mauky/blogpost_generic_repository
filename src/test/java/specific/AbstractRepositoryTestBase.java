@@ -1,7 +1,9 @@
 package specific;
 
 import generic.Repository;
+import org.junit.AfterClass;
 import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -12,6 +14,25 @@ import java.util.Set;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public abstract class AbstractRepositoryTestBase {
+    private static long startTime;
+
+    @BeforeClass
+    public static void startBenchmark() {
+        startTime = System.currentTimeMillis();
+    }
+
+    @AfterClass
+    public static void stopBenchmark() {
+        final long endTime = System.currentTimeMillis();
+
+        final long diff = endTime - startTime;
+
+        System.out.println("millis spend:" + diff);
+    }
+
+
+
+
 
     Repository<Person> repository;
 

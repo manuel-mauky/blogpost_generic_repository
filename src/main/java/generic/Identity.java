@@ -1,10 +1,14 @@
 package generic;
 
+import javax.persistence.Id;
+import javax.persistence.MappedSuperclass;
 import java.util.Objects;
 import java.util.UUID;
 
+@MappedSuperclass
 public abstract class Identity {
 
+    @Id
     private final String id;
 
     public Identity() {

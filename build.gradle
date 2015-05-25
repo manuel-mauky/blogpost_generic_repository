@@ -2,16 +2,26 @@ apply plugin: "java"
 
 sourceCompatibility = 1.8
 
+
 repositories {
     mavenCentral()
 }
 
 
 dependencies {
+
+    compile 'org.eclipse.persistence:eclipselink:2.6.0'
+    compile 'org.eclipse.persistence:javax.persistence:2.1.0'
+    compile 'org.hsqldb:hsqldb:2.3.2'
+
     testCompile "org.assertj:assertj-core:3.0.0"
 	testCompile "junit:junit:4.11"
 }
 
 task wrapper(type: Wrapper) {
-  gradleVersion = '2.4'
+    gradleVersion = '2.4'
+}
+
+test {
+    forkEvery=1
 }
