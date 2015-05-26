@@ -1,4 +1,4 @@
-This repository contains example code for two blog posts [1](http://lestard.eu/2015/generic_repository_part1/)[2](http://lestard.eu/2015/generic_repository_part2/)
+This repository contains example code for two blog posts [[1]](http://lestard.eu/2015/generic_repository_part1/)[[2]](http://lestard.eu/2015/generic_repository_part2/)
 about a generic implementation of the "Repository Design Pattern" with Java.
 
 There is an in-memory implementation that is intended to be used during the development and for testing purposes
