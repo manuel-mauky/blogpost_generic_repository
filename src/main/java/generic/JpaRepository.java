@@ -83,7 +83,7 @@ public class JpaRepository<T extends Identity> implements Repository<T> {
         runInTransaction(entityManager -> {
             entities
                     .stream()
-                    .map(Identity::getId)
+                    .map(T::getId)
                     .map(id -> entityManager.find(type, id))
                     .filter(Objects::nonNull)
                     .forEach(entityManager::remove);
